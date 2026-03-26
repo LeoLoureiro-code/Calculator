@@ -1,0 +1,49 @@
+:root{
+    --color-bg: #3A4663;
+    --color-primary: #242D44;
+    --color-button-bg: #E6E6E6;
+    --color-equal-bg: #D03F2F;
+    --color-digit: #434A59;
+    --color-display: #FFFFFF;
+    --color-header-text: #FFFFFF;
+
+
+    
+    --black: #000000;
+    --purple950: #17062A;
+    --purple900: #1E0936;
+    --purple850: #331C4D;
+    --purple800: #56077C;
+    --purple700: #6C34AC;
+    --purple650: #8631AF;
+    --navy950: #181F33;
+    --navy700: #647198;
+    --navy400: #A2B2E1;
+    --gray900: #36362C;
+    --gray300: #D2CDCD;
+    --gray100: #EEEEEE;
+    --blue950: #1A2327;
+    --blue500: #378187;
+    --blue400: #62B5BC;
+    --red400: #F96B5B;
+    --orange700: #C85402;
+    --orange400: #FF8A38;
+    --cyan500: #00DED0;
+    --cyan200: #93FFF8;
+    --yellow300: #FFE53D;
+    --font-family: "League Spartan", sans-serif;
+}
+
+.theme1{
+    --color-bg: #3A4663;
+    --color-primary: #242D44;
+    --color-button-bg: #E6E6E6;
+    --color-equal-bg: #D03F2F;
+    --color-digit: #434A59;
+    --color-display: #FFFFFF;
+    --color-header-text: #FFFFFF;
+}
+
+.theme2{
+
+}
