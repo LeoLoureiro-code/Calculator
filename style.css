@@ -3,52 +3,64 @@
     --color-primary: #242D44;
     --color-button-bg: #E6E6E6;
     --color-equal-bg: #D03F2F;
+    --color-equal-bg-hover:#F96B5B;
     --color-digit: #434A59;
-    --color-reset-equal: #647198;
+    --color-reset-del: #647198;
+    --color-reset-del-hover: #A2B2E1;
+    --color-display-bg: #36362C;
     --color-display-text: #FFFFFF;
     --color-header-text: #FFFFFF;
 
 
-    
 
-    --purple950: #17062A;
-    --purple900: #1E0936;
-    --purple850: #331C4D;
-    --purple800: #56077C;
+    --purple800: ;
     --purple700: #6C34AC;
-    --purple650: #8631AF;
     --navy950: #181F33;
-    --navy400: #A2B2E1;
-    --gray900: #36362C;
-
-
     --blue950: #1A2327;
-    --blue400: #62B5BC;
-    --red400: #F96B5B;
-    --orange400: #FF8A38;
-    --cyan500: #00DED0;
-    --cyan200: #93FFF8;
-    --yellow300: #FFE53D;
     --font-family: "League Spartan", sans-serif;
 }
+
+/*fix colors*/
 
 .theme1{
     --color-bg: #3A4663;
     --color-primary: #242D44;
     --color-button-bg: #E6E6E6;
     --color-equal-bg: #D03F2F;
+    --color-equal-bg-hover:#F96B5B;
     --color-digit: #434A59;
-    --color-display: #FFFFFF;
+    --color-reset-del: #647198;
+    --color-reset-del-hover: #A2B2E1;
+    --color-display-bg: #36362C;
+    --color-display-text: #FFFFFF;
     --color-header-text: #FFFFFF;
+
+
 }
 
 .theme2{
-    --color-bg: #EEEEEE;
-    --color-primary: #D2CDCD;
+    --color-bg: #E6E6E6;
+    --color-primary: #1E0936;
     --color-button-bg: #979797;
     --color-equal-bg: #C85402;
+     --color-equal-bg-hover:#FF8A38;
     --color-digit: #000000;
-    --color-reset-equal: #378187;
+    --color-reset-del: #378187;
+    --color-reset-del-hover:#62B5BC;
+    --color-display-bg: #EEEEEE ;
     --color-display-text: #000000;
     --color-header-text: #000000;
 }
+
+.theme3{
+    --color-bg: #17062A;
+    --color-primary: #D2CDCD;
+    --color-button-bg: #331C4D;
+    --color-equal-bg: #00DED0;
+    --color-equal-bg-hover:#93FFF8;
+    --color-digit: #FFE53D;
+    --color-reset-del: #56077C;
+    --color-reset-del-hover: #8631AF;
+    --color-display-text: #FFE53D;
+    --color-header-text: #FFE53D;
+}      
