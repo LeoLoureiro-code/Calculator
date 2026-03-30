@@ -7,7 +7,7 @@
     --color-digit: #434A59;
     --color-reset-del: #647198;
     --color-reset-del-hover: #A2B2E1;
-    --color-display-bg: #36362C;
+    --color-display-bg: #181F33;
     --color-display-text: #FFFFFF;
     --color-header-text: #FFFFFF;
 
@@ -31,7 +31,7 @@
     --color-digit: #434A59;
     --color-reset-del: #647198;
     --color-reset-del-hover: #A2B2E1;
-    --color-display-bg: #36362C;
+    --color-display-bg: #181F33;
     --color-display-text: #FFFFFF;
     --color-header-text: #FFFFFF;
 
@@ -64,3 +64,110 @@
     --color-display-text: #FFE53D;
     --color-header-text: #FFE53D;
 }      
+
+
+body{
+    margin: 0 auto;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    cursor: pointer;
+}
+
+header{
+    min-width: 20.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    height: 44rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.display_screen{
+    min-width: 20.4rem;
+    min-height: 5.5rem;
+    background-color: var(--color-display-bg);
+    color: var(--color-display-text);
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.keys_div{
+    background-color: var(--color-primary);
+    padding: 1rem;
+    min-width: 20.4rem;
+    max-height: 30rem;
+    border-radius: 10px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.small_button{
+    background-color: var(--color-button-bg);
+    color: var(--color-digit); 
+    min-width: 3.75rem;
+    min-height: 3.75rem;
+    border: none;
+    outline: none;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px #979797;
+}
+
+.del_button{
+    font-size: 1.3rem;
+    color: var(--color-button-bg);
+    background-color: var(--color-reset-del);
+    box-shadow: 0px 4px 0px #363d53;
+}
+
+.large_button{
+    min-width: 8.5rem;
+}
+
+.reset_button, .equal_button{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.2s ease-out;
+}
+
+.reset_button:hover, .del_button:hover{
+    background-color: var(--color-reset-del-hover);
+}
+
+.reset_button{
+    grid-column: 1/3;
+    font-size: 1.3rem;
+    color: var(--color-button-bg);
+    background-color: var(--color-reset-del);
+    box-shadow: 0px 4px 0px #363d53;
+}
+
+.equal_button{
+    grid-column: 3/-1;
+    font-size: 1.4rem;
+    color: var(--color-button-bg);
+    background-color: var(--color-equal-bg);
+    box-shadow: 0px 4px 0px #a13124;
+}
+
+.equal_button:hover{
+    background-color: var(--color-equal-bg-hover);
+}
