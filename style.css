@@ -20,7 +20,6 @@
     --font-family: "League Spartan", sans-serif;
 }
 
-/*fix colors*/
 
 .theme1{
     --color-bg: #3A4663;
@@ -34,35 +33,48 @@
     --color-display-bg: #181F33;
     --color-display-text: #FFFFFF;
     --color-header-text: #FFFFFF;
-
+    --color-shadow-small-button: #979797;
+    --color-shadow-del-button: #363d53;
+    --color-shadow-reset-button: #363d53;
+    --color-shadow-equal-button: #a13124;
 
 }
 
 .theme2{
     --color-bg: #E6E6E6;
-    --color-primary: #1E0936;
-    --color-button-bg: #979797;
+    --color-primary: #D2CDCD;
+    --color-button-bg: #E6E6E6;
     --color-equal-bg: #C85402;
-     --color-equal-bg-hover:#FF8A38;
+    --color-equal-bg-hover:#FF8A38;
     --color-digit: #000000;
     --color-reset-del: #378187;
     --color-reset-del-hover:#62B5BC;
-    --color-display-bg: #EEEEEE ;
+    --color-display-bg: #EEEEEE;
     --color-display-text: #000000;
     --color-header-text: #000000;
+    --color-shadow-small-button: #979797;
+    --color-shadow-del-button: #307379;
+    --color-shadow-reset-button: #307379;
+    --color-shadow-equal-button: #79241a;
 }
 
+/*Needs del and reset text color*/
 .theme3{
     --color-bg: #17062A;
-    --color-primary: #D2CDCD;
+    --color-primary: #1E0936;
     --color-button-bg: #331C4D;
     --color-equal-bg: #00DED0;
     --color-equal-bg-hover:#93FFF8;
     --color-digit: #FFE53D;
     --color-reset-del: #56077C;
     --color-reset-del-hover: #8631AF;
+    --color-display-bg: #1E0936;
     --color-display-text: #FFE53D;
     --color-header-text: #FFE53D;
+    --color-shadow-small-button: #979797;
+    --color-shadow-del-button: #460664;
+    --color-shadow-reset-button: #460664;
+    --color-shadow-equal-button: #01bdb0;
 }      
 
 
@@ -126,14 +138,14 @@ header{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    box-shadow: 0px 4px 0px #979797;
+    box-shadow: 0px 4px 0px var(--color-shadow-small-button);
 }
 
 .del_button{
     font-size: 1.3rem;
     color: var(--color-button-bg);
     background-color: var(--color-reset-del);
-    box-shadow: 0px 4px 0px #363d53;
+    box-shadow: 0px 4px 0px var(--color-shadow-del-button);
 }
 
 .large_button{
@@ -157,7 +169,7 @@ header{
     font-size: 1.3rem;
     color: var(--color-button-bg);
     background-color: var(--color-reset-del);
-    box-shadow: 0px 4px 0px #363d53;
+    box-shadow: 0px 4px 0px var(--color-shadow-reset-button);
 }
 
 .equal_button{
@@ -165,7 +177,7 @@ header{
     font-size: 1.4rem;
     color: var(--color-button-bg);
     background-color: var(--color-equal-bg);
-    box-shadow: 0px 4px 0px #a13124;
+    box-shadow: 0px 4px 0px var(--color-shadow-equal-button);
 }
 
 .equal_button:hover{
