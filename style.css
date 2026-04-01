@@ -84,6 +84,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-family);
 }
 
 button{
@@ -101,6 +102,54 @@ header{
 .container{
     display: flex;
     flex-direction: column;
+}
+
+.logo{
+    font-size: clamp(1.8rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--color-display-text);
+}
+
+.theme_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.theme_numbers{
+    color: var(--color-display-text);
+    position: absolute;
+    top: -120%;
+    right: 5%;
+    width: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+label{
+    color: var(--color-display-text);
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+
+#theme{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 3rem;
+    height: 1.5rem;
+    background: var(--color-primary);
+    border-radius: 20px;
+    padding-right: 5px;
+    padding-left: 5px ;
+}
+
+#theme::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-color: var(--color-equal-bg);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
 }
 
 .display_screen{
