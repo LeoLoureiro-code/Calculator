@@ -58,7 +58,6 @@
     --color-shadow-equal-button: #79241a;
 }
 
-/*Needs del and reset text color*/
 .theme3{
     --color-bg: #17062A;
     --color-primary: #1E0936;
@@ -85,6 +84,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: var(--font-family);
+    transition: 0.5s ease-in-out;
 }
 
 button{
