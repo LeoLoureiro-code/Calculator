@@ -13,6 +13,16 @@ const Calculator = {
 const slider = document.querySelector('#theme');
 const body = document.querySelector('body');
 
+function NewThemeRender(){
+    Calculator.theme = `theme${slider.value}`
+    body.classList = 'none';
+    body.className = Calculator.theme;
+}
+
+function Render(){
+    NewThemeRender();
+}
+
 slider.addEventListener('input', function(){
-    body.className = "theme" + slider.value;
+   Render();
 });
