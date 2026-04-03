@@ -70,7 +70,7 @@
     --color-display-bg: #1E0936;
     --color-display-text: #FFE53D;
     --color-header-text: #FFE53D;
-    --color-shadow-small-button: #979797;
+    --color-shadow-small-button: #17052c;
     --color-shadow-del-button: #460664;
     --color-shadow-reset-button: #460664;
     --color-shadow-equal-button: #01bdb0;
@@ -84,7 +84,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: var(--font-family);
-    transition: 0.5s ease-in-out;
+    transition: 0.8s ease-out;
 }
 
 button{
