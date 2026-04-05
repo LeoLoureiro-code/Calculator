@@ -26,3 +26,10 @@ function Render(){
 slider.addEventListener('input', function(){
    Render();
 });
+
+document.querySelectorAll("button").forEach(button =>{
+    button.addEventListener("click", () =>{
+        const value = button.dataset.value;
+        console.log(value);
+    })
+})
