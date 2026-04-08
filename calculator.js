@@ -39,6 +39,13 @@ function DigitCheck(digitToCheck){
 
 }
 
+function ResetCalculator(){
+    Calculator.tokens = [];
+    Calculator.current = "";
+    Calculator.output = "";
+    Render();
+}
+
 // Render functions
 function ThemeRender(){
     Calculator.theme = `theme${slider.value}`
@@ -47,15 +54,16 @@ function ThemeRender(){
 }
 
 function DisplayEquationRender(){
-    equation.textContent = Calculator.tokens;
+    equation.textContent = Calculator.tokens.join("");
 }
 
-function DisplayNextNumber(){
-
+function DisplayNumber(){
+    nextNumberAndResult.textContent = Calculator.current;
 }
 
 function Render(){
     ThemeRender();
+    DisplayNumber();
     DisplayEquationRender();
 }
 
@@ -69,13 +77,18 @@ document.querySelectorAll("button").forEach(button =>{
         const isDigit = DigitCheck(value);
         if(isDigit){
             Number(Calculator.current += value);
-            console.log(Calculator.current);
+            Render();
         }
         else{
             Calculator.tokens.push(Calculator.current);
             Calculator.tokens.push(value);
-            console.log(Calculator.tokens);
+            Calculator.current = "";
+            Render();
         }
         Render();
     })
-})
+});
+
+document.querySelector("#reset_button").addEventListener("click", () =>{
+    ResetCalculator();
+});
