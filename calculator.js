@@ -122,6 +122,7 @@ function ResolveEquation() {
 
     if (isNumber(Calculator.current)) {
         Calculator.tokens.push(Calculator.current);
+        Calculator.current = ""; 
     }
 
     DisplayEquationRender();
