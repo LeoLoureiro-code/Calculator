@@ -21,7 +21,7 @@ const nextNumberAndResult = document.querySelector('.display_next_result');
 //Help functions
 
 function isNumber(value) {
-    return /^[0-9]+$/.test(value);
+    return /^[0-9]+(\.[0-9]+)?$/.test(value);
 }
 
 function AddDecimal(digitToAddDecimal) {
@@ -56,7 +56,7 @@ function ResolveMultiplicationDivision(tokens) {
             let first = tokens[i - 1];
             let second = tokens[i + 1];
 
-            if (second == 0) {
+            if (second === 0) {
                 Calculator.error = true;
                 return []; 
             }
