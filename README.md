@@ -48,6 +48,7 @@ Users should be able to:
 ### Screenshot
 
 ![Mobile Screenshot](./design/mobile-design-theme-1.jpg)
+
 ![Desktop Screenshot](./desktop-design-theme-1.jpg)
 
 ### Links
