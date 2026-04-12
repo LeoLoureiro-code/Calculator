@@ -49,7 +49,7 @@ Users should be able to:
 
 ![Mobile Screenshot](./design/mobile-design-theme-1.jpg)
 
-![Desktop Screenshot](./desktop-design-theme-1.jpg)
+![Mobile Screenshot](./design/desktop-design-theme-1.jpg)
 
 ### Links
 
@@ -133,4 +133,4 @@ Author
 
 Leonardo Loureiro
 
-*   GitHub - _([Add your GitHub profile](https://github.com/LeoLoureiro-code/Calculator))_
+*   GitHub - _(https://github.com/LeoLoureiro-code/Calculator)_
