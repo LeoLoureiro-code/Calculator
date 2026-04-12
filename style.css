@@ -157,7 +157,7 @@ label{
 }
 
 .display_next_result{
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
 }
 
@@ -168,6 +168,7 @@ label{
 }
 
 .display_operation{
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -191,7 +192,7 @@ label{
     box-shadow: 0px 4px 0px var(--color-shadow-small-button);
     color: var(--color-digit); 
     font-family: var(--font-family);
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     font-weight: 700;
     min-width: 3.75rem;
     min-height: 3.75rem;
@@ -243,4 +244,30 @@ label{
 
 .equal_button:hover{
     background-color: var(--color-equal-bg-hover);
+}
+
+/*Tablet and desktop*/
+
+.container{
+    margin-top: 4.3rem;
+    width: 33.75rem;
+}
+
+.display_screen{
+    height: 7rem;
+}
+
+.display_operation{
+    margin-bottom: 2rem;
+}
+
+.keys_div{
+    height: 26.5rem;
+    gap: 1.4rem; 
+    padding: 1.9rem 1.5rem 2rem 1.9rem;
+}
+
+.small_button{
+    height: 4rem;
+    width: 6.3rem;
 }
