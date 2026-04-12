@@ -8,7 +8,8 @@ const Calculator = {
     theme: THEMES.THEME1,
     current: "",
     tokens: [],
-    output: 0,
+    output: "",
+    error: false
 }
 
 const slider = document.querySelector('#theme');
@@ -18,6 +19,10 @@ const nextNumberAndResult = document.querySelector('.display_next_result');
 
 
 //Help functions
+
+function isNumber(value) {
+    return /^[0-9]+$/.test(value);
+}
 
 function AddDecimal(digitToAddDecimal) {
     if (digitToAddDecimal === "") {
@@ -34,8 +39,8 @@ function AddDecimal(digitToAddDecimal) {
 
 function ResolveMultiplicationDivision(tokens) {
 
-    
-    for (let i = 0; i <= tokens.length; i++) {
+
+    for (let i = 0; i < tokens.length; i++) {
 
         if (tokens[i] === "*") {
             let result = "";
@@ -50,19 +55,23 @@ function ResolveMultiplicationDivision(tokens) {
             let result = "";
             let first = tokens[i - 1];
             let second = tokens[i + 1];
+
+            if (second == 0) {
+                Calculator.error = true;
+                return []; 
+            }
             result = Number(first) / Number(second);
             tokens.splice(i - 1, 3, result.toString());
             i -= 1;
         }
-        
+
     }
-    console.log(tokens);
     return tokens;
 }
 
 function ResolveAdditionSubstraction(tokens) {
-    
-    for (let i = 0; i <= tokens.length; i++) {
+
+    for (let i = 0; i < tokens.length; i++) {
 
         if (tokens[i] === "+") {
             let result = "";
@@ -94,25 +103,51 @@ function ResetCalculator() {
 }
 
 function DeleteCurrentNumber() {
+
+    if (Calculator.error) {
+        Calculator.error = false;
+        Calculator.current = "";
+        Render();
+        return;
+    }
+
     const currentNumber = Calculator.current.split("");
     currentNumber.pop();
     Calculator.current = currentNumber.join("");
+
     Render();
 }
 
 function ResolveEquation() {
 
-    if (Calculator.current !== "") {
-
+    if (isNumber(Calculator.current)) {
         Calculator.tokens.push(Calculator.current);
-        Calculator.current = "";
     }
-    let AdditionAndSubstractionTokens = ResolveMultiplicationDivision(Calculator.tokens);
-    
-    let EquationResolved = ResolveAdditionSubstraction(AdditionAndSubstractionTokens);
-    
-    Calculator.output = EquationResolved;
-    Render();
+
+    DisplayEquationRender();
+
+    let tokensCopy = [...Calculator.tokens];
+
+    let afterMulDiv = ResolveMultiplicationDivision(tokensCopy);
+
+    if (Calculator.error) {
+        ResultRender();
+        return;
+    }
+
+    let result = ResolveAdditionSubstraction(afterMulDiv);
+
+    if (Calculator.error) {
+        ResultRender();
+        return;
+    }
+
+    Calculator.output = result[0];
+
+    ResultRender();
+
+    Calculator.current = Calculator.output;
+    Calculator.tokens = [];
 }
 
 // Render functions
@@ -123,14 +158,24 @@ function ThemeRender() {
 }
 
 function DisplayEquationRender() {
-    equation.textContent = Calculator.tokens.join("");
+    equation.textContent = Calculator.tokens.join("") + Calculator.current;
 }
 
 function CurrentNumberRender() {
+    if (Calculator.error) {
+        nextNumberAndResult.textContent = "ERROR";
+        return;
+    }
+
     nextNumberAndResult.textContent = Calculator.current;
 }
 
 function ResultRender() {
+    if (Calculator.error) {
+        nextNumberAndResult.textContent = "ERROR";
+        return;
+    }
+
     nextNumberAndResult.textContent = Calculator.output;
 }
 
